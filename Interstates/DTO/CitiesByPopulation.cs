@@ -17,13 +17,11 @@ namespace Interstates
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendLine(Population.ToString());
 
-            stringBuilder.AppendLine();
-
             foreach (var item in Items)
             {
+                stringBuilder.AppendLine();
                 stringBuilder.AppendLine(item.StateCity);
                 stringBuilder.AppendLine(string.Format("Interstates: {0}", item.Interstates));
-                stringBuilder.AppendLine();
             }
 
             return stringBuilder.ToString();

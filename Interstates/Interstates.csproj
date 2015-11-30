@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CitiesByPopulation.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="InputDataReader.cs" />
-    <Compile Include="InputFileDataRow.cs" />
-    <Compile Include="InterstatesByCity.cs" />
-    <Compile Include="Processor.cs" />
-    <Compile Include="IWriteable.cs" />
-    <Compile Include="Option1Command.cs" />
-    <Compile Include="OutputDataWriter.cs" />
+    <Compile Include="DTO\CitiesByPopulation.cs" />
+    <Compile Include="Infrastructure\ICommand.cs" />
+    <Compile Include="Infrastructure\InputDataReader.cs" />
+    <Compile Include="DTO\InputFileDataRow.cs" />
+    <Compile Include="DTO\InterstatesByCity.cs" />
+    <Compile Include="DataProcessing\Processor.cs" />
+    <Compile Include="Infrastructure\IWriteable.cs" />
+    <Compile Include="Infrastructure\Option1Command.cs" />
+    <Compile Include="Infrastructure\OutputDataWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
