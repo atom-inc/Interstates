@@ -14,6 +14,14 @@ namespace Interstates
 
         public string State { get; set; }
 
-        public List<int> Interstates { get; set; }
+        public IEnumerable<int> Interstates { get; set; }
+
+        public InputFileDataRow(int population, string city, string state, IEnumerable<int> interstates)
+        {
+            Population = population;
+            City = city;
+            State = state;
+            Interstates = interstates;
+        }
     }
 }

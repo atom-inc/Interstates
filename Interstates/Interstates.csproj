@@ -42,8 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CitiesByPopulation.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="InputDataReader.cs" />
     <Compile Include="InputFileDataRow.cs" />
     <Compile Include="InterstatesByCity.cs" />
+    <Compile Include="IWriteable.cs" />
+    <Compile Include="Option1Command.cs" />
+    <Compile Include="OutputDataWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
