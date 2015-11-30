@@ -12,13 +12,13 @@ namespace Interstates
         private FileInfo _inputFileInfo;
         private IEnumerable<InputFileDataRow> _inputData;
         private IEnumerable<CitiesByPopulation> _citiesByPopulationData;
-        private IEnumerable<InterstatesByCity> _interstatesByCityData;
+        private InterstatesByCity _interstatesByCityData;
 
         public void Execute(string filename)
         {
             CheckInputFile(filename);
             ReadInputFile();
-            //Process data
+            ProcessData();
             WriteOutputFiles();
         }
 
@@ -37,6 +37,13 @@ namespace Interstates
             _inputData = dataReader.GetData();
         }
 
+        private void ProcessData()
+        {
+            var dataProcessor = new Processor(_inputData);
+            _citiesByPopulationData = dataProcessor.CitiesByPopulation;
+            _interstatesByCityData = dataProcessor.InterstatesByCity;
+        }
+
         private void WriteOutputFiles()
         {
             WriteCitiesByPopulationFile();
@@ -46,7 +53,7 @@ namespace Interstates
         private void WriteInterstatesByCityFile()
         {
             var dataWriter = new OutputDataWriter();
-            dataWriter.Write("Interstates_By_City.txt", _interstatesByCityData);
+            dataWriter.Write("Interstates_By_City.txt", _interstatesByCityData.Items);
         }
 
         private void WriteCitiesByPopulationFile()

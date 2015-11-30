@@ -27,6 +27,7 @@ namespace Interstates
             {
                 Console.WriteLine("Enter input file path.");
             }
+            Console.ReadKey();
         }
     }
 }

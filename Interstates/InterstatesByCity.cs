@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace Interstates
 {
-    public class InterstatesByCity : IWriteable
+    public class InterstatesByCity
     {
         public List<InterstatesByCityItem> Items { get; set; }
 
-        public string GetStringToWrite()
+        public InterstatesByCity()
         {
-            var stringBuilder = new StringBuilder();
-            foreach (var item in Items)
-            {
-                stringBuilder.AppendLine(string.Format("{0} {1}", item.Interstate, item.NumberOfCities));
-            }
-
-            return stringBuilder.ToString();
+            Items = new List<InterstatesByCityItem>();
         }
     }
 
-    public class InterstatesByCityItem
+    public class InterstatesByCityItem : IWriteable
     {
         public string Interstate { get; set; }
 
         public int NumberOfCities { get; set; }
+
+        public string GetStringToWrite()
+        {
+            return string.Format("{0} {1}", Interstate, NumberOfCities);
+        }
     }
 }
