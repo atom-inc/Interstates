@@ -46,6 +46,7 @@
     <Compile Include="InputDataReader.cs" />
     <Compile Include="InputFileDataRow.cs" />
     <Compile Include="InterstatesByCity.cs" />
+    <Compile Include="Processor.cs" />
     <Compile Include="IWriteable.cs" />
     <Compile Include="Option1Command.cs" />
     <Compile Include="OutputDataWriter.cs" />
