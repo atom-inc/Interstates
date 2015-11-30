@@ -25,9 +25,11 @@ namespace Interstates
             }
             else
             {
-                Console.WriteLine("Enter input file path.");
+                Console.WriteLine("Run application with input file path parameter. (Interstates.exe data.txt)");
             }
+#if DEBUG
             Console.ReadKey();
+#endif
         }
     }
 }

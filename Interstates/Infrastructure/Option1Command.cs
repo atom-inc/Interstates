@@ -16,10 +16,23 @@ namespace Interstates
 
         public void Execute(string filename)
         {
+            Console.WriteLine("Start...");
+            
             CheckInputFile(filename);
+            
+            Console.WriteLine("Start reading input file");
             ReadInputFile();
+            Console.WriteLine("End reading input file");
+
+            Console.WriteLine("Start data processing");
             ProcessData();
+            Console.WriteLine("End data processing");
+
+            Console.WriteLine("Start writing output file");
             WriteOutputFiles();
+            Console.WriteLine("End writing output file");
+
+            Console.WriteLine("End...");
         }
 
         private void CheckInputFile(string filename)
